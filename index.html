@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123d2c">
+
+  <title>GreenMind — Focus. Grow. Achieve.</title>
+
+  <meta name="description"
+        content="Grow your virtual forest while building better study habits with GreenMind.">
+
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="#" class="brand">
+      <img src="logo.png" alt="" class="logo"
+           onerror="this.style.display='none'">
+      <span>Green<span class="brand-light">Mind</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#focus">Focus</a>
+      <a href="#forest">My Forest</a>
+      <a href="#tasks">Tasks</a>
+    </nav>
+
+    <button id="themeToggle" class="icon-button"
+            type="button" aria-label="Toggle dark mode">
+      🌙
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL GROWTH SPACE</p>
+        <h1>Small steps.<br><span>A greener mind.</span></h1>
+        <p class="subtitle">
+          Focus on what matters. Grow a forest, one session at a time.
+        </p>
+      </div>
+
+      <div class="welcome-badge">
+        <span>🌱</span>
+        <div>
+          <strong id="greeting">Ready to grow?</strong>
+          <small>Every minute counts.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Your statistics">
+      <article class="stat-card">
+        <span class="stat-icon">⏱️</span>
+        <p>Total focus time</p>
+        <strong id="totalTime">0 min</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon">🌳</span>
+        <p>Trees grown</p>
+        <strong id="treeCount">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon">🎯</span>
+        <p>Sessions completed</p>
+        <strong id="sessionCount">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon">🔥</span>
+        <p>Daily streak</p>
+        <strong id="streakCount">0 days</strong>
+      </article>
+    </section>
+
+    <section class="main-grid">
+      <article class="panel focus-panel" id="focus">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TIME TO CONCENTRATE</p>
+            <h2>Focus session</h2>
+          </div>
+          <span class="status-pill" id="status">READY</span>
+        </div>
+
+        <div class="tree-stage" id="treeStage">
+          <div class="sun"></div>
+          <div class="hill hill-back"></div>
+          <div class="hill hill-front"></div>
+
+          <div class="growing-tree" id="growingTree"
+               role="img" aria-label="A small tree ready to grow">
+            <span class="tree-crown crown-one"></span>
+            <span class="tree-crown crown-two"></span>
+            <span class="tree-crown crown-three"></span>
+            <span class="tree-trunk"></span>
+          </div>
+
+          <div class="tree-ground"></div>
+          <span class="tree-message" id="treeMessage">
+            Your next tree starts here 🌱
+          </span>
+        </div>
+
+        <div class="timer-display" id="timerDisplay"
+             role="timer" aria-label="Time remaining">
+          25:00
+        </div>
+
+        <p class="timer-caption" id="timerCaption">
+          Choose your focus duration and begin.
+        </p>
+
+        <div class="duration-options" aria-label="Focus duration">
+          <button class="duration-btn" data-minutes="15"
+                  type="button">15 min</button>
+          <button class="duration-btn selected" data-minutes="25"
+                  type="button">25 min</button>
+          <button class="duration-btn" data-minutes="45"
+                  type="button">45 min</button>
+          <button class="duration-btn" data-minutes="60"
+                  type="button">60 min</button>
+        </div>
+
+        <div class="timer-actions">
+          <button id="startBtn" class="primary-button" type="button">
+            ▶ Start focusing
+          </button>
+          <button id="resetBtn" class="secondary-button" type="button">
+            ↺ Reset
+          </button>
+        </div>
+
+        <p class="small-note">
+          🌿 Stay focused to grow your tree. Leaving the page open
+          keeps your session running.
+        </p>
+      </article>
+
+      <div class="right-column">
+        <article class="panel" id="tasks">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">PLAN YOUR GROWTH</p>
+              <h2>Study tasks</h2>
+            </div>
+            <span class="task-total" id="taskTotal">0 tasks</span>
+          </div>
+
+          <form id="taskForm" class="task-form">
+            <label class="visually-hidden" for="taskInput">
+              New study task
+            </label>
+            <input id="taskInput" type="text"
+                   maxlength="100"
+                   placeholder="e.g. Revise Chemistry..."
+                   required>
+            <button type="submit" class="add-button"
+                    aria-label="Add task">+</button>
+          </form>
+
+          <div id="taskList" class="task-list"></div>
+          <p id="emptyTasks" class="empty-state">
+            No tasks yet. Add your first goal! ✨
+          </p>
+        </article>
+
+        <article class="panel forest-panel" id="forest">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">YOUR LITTLE PARADISE</p>
+              <h2>My forest</h2>
+            </div>
+            <span class="forest-count" id="forestLabel">0 trees</span>
+          </div>
+
+          <p class="forest-description">
+            Every completed focus session adds a tree to your forest.
+          </p>
+
+          <div id="forestGrid" class="forest-grid"></div>
+
+          <p id="emptyForest" class="empty-state">
+            🌱 Your forest is waiting to grow.
+          </p>
+        </article>
+
+        <article class="quote-card">
+          <span>❝</span>
+          <p id="quoteText">
+            Great things are done by a series of small things brought together.
+          </p>
+          <small>YOUR DAILY REMINDER</small>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-brand">🌿 GreenMind</div>
+      <p>Focus. Grow. Achieve.</p>
+      <p class="footer-note">
+        Your progress grows with every focused minute.
+      </p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status"
+       aria-live="polite"></div>
+</body>
+</html>
