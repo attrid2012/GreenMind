@@ -1,217 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#123d2c">
-
-  <title>GreenMind — Focus. Grow. Achieve.</title>
-
-  <meta name="description"
-        content="Grow your virtual forest while building better study habits with GreenMind.">
-
-  <link rel="icon" href="logo.png">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123d2b">
+<title>GreenMind — Focus. Grow. Achieve.</title>
+<style>
+:root{--bg:#dcefd8;--bg2:#eff8e9;--card:#fbfff7;--ink:#173b2a;--muted:#607b67;--green:#24663e;--green2:#4f9b54;--lime:#c5e98a;--line:#c9e0c4;--shadow:0 18px 48px #164a2814}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#f4ffe9 0,transparent 34%),linear-gradient(145deg,var(--bg),#b9dfb3 55%,#e5f4d9);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e4b84c;outline-offset:3px}.wrap{width:min(1220px,92%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 0}.brand{display:flex;align-items:center;gap:11px;font-size:25px;font-weight:900;letter-spacing:-1px;color:#164a2e;text-decoration:none}.brand-mark{width:45px;height:45px;border-radius:16px;background:#194d32;display:grid;place-items:center;color:white;font-size:25px;box-shadow:0 7px 15px #174d3228}.brand em{font-style:normal;color:#64a647}.nav{display:flex;align-items:center;gap:8px}.nav a,.soft-btn{padding:10px 14px;border:1px solid #c6dfc1;border-radius:14px;color:#245538;text-decoration:none;font-weight:750;font-size:13px;background:#f8fff3b8}.soft-btn{cursor:pointer}.hero{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:36px 0 25px}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:900;color:#4d8a4a;margin:0 0 10px}.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.02;letter-spacing:-3px;margin:0;max-width:690px}.hero h1 span{color:#478b42}.hero p.sub{color:#55735c;line-height:1.7;max-width:540px;font-size:15px}.hero-chip{background:#f9fff3;border:1px solid #c6dfc1;border-radius:22px;padding:17px 20px;display:flex;align-items:center;gap:12px;min-width:200px;box-shadow:var(--shadow)}.hero-chip .big{font-size:33px}.hero-chip strong,.hero-chip small{display:block}.hero-chip small{color:var(--muted);margin-top:4px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:14px 0 22px}.stat{background:#fafff6d9;border:1px solid var(--line);border-radius:21px;padding:18px;box-shadow:var(--shadow)}.stat .ico{width:39px;height:39px;border-radius:13px;background:#e5f4dc;display:grid;place-items:center;font-size:20px}.stat p{font-size:12px;color:var(--muted);margin:13px 0 5px}.stat strong{font-size:25px;letter-spacing:-.7px}.layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:20px;align-items:start}.card{background:#fbfff7ed;border:1px solid #c7dfc1;border-radius:25px;padding:23px;box-shadow:var(--shadow);min-width:0}.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.card h2{font-size:21px;margin:0;letter-spacing:-.5px}.pill{font-size:10px;letter-spacing:.5px;font-weight:900;color:#27613b;background:#e4f3dc;padding:8px 11px;border-radius:20px;white-space:nowrap}.scene{height:270px;margin:22px 0 12px;border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(#d9f3c8 0%,#eaf7d9 53%,#a9d99a 100%);isolation:isolate}.sun{position:absolute;right:13%;top:24px;width:55px;height:55px;background:#fff1a7;border-radius:50%;box-shadow:0 0 40px #fff6bd8c}.cloud{position:absolute;top:45px;left:12%;font-size:27px;opacity:.6}.far-hill,.near-hill{position:absolute;bottom:-46px;width:130%;height:150px;border-radius:50% 50% 0 0}.far-hill{left:-25%;background:#9bcf91}.near-hill{left:20%;bottom:-65px;background:#70b873}.tree-visual{position:absolute;left:50%;bottom:42px;width:150px;height:195px;transform:translateX(-50%);transform-origin:center bottom;transition:transform .5s}.trunk{position:absolute;left:69px;bottom:0;width:15px;height:82px;background:linear-gradient(90deg,#805132,#a87342);border-radius:9px 9px 2px 2px;z-index:2}.leaf{position:absolute;left:50%;bottom:70px;transform:translateX(-50%) scale(.45);opacity:.45;width:80px;height:83px;border-radius:48% 52% 46% 48%;background:#39884b;box-shadow:inset -10px -8px 0 #26743e;transition:all .45s}.leaf.l2{width:67px;height:75px;left:31%;bottom:60px;background:#5da64c}.leaf.l3{width:68px;height:74px;left:69%;bottom:61px;background:#287746}.leaf.l4{width:52px;height:58px;bottom:126px;background:#79b95a}.leaf.l5{width:43px;height:48px;left:28%;bottom:106px;background:#6bb452}.leaf.l6{width:44px;height:49px;left:72%;bottom:105px;background:#3e9149}.tree-visual.grown .leaf{transform:translateX(-50%) scale(1);opacity:1}.tree-visual.grown .leaf.l2{transform:translateX(-50%) scale(1) rotate(-12deg)}.tree-visual.grown .leaf.l3{transform:translateX(-50%) scale(1) rotate(12deg)}.tree-visual.grown .leaf.l4{transform:translateX(-50%) scale(1.1)}.tree-visual.grown .trunk{height:90px}.ground{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);width:125px;height:13px;border-radius:50%;background:#397a3c35}.scene-caption{position:absolute;z-index:3;bottom:10px;width:100%;text-align:center;font-size:11px;font-weight:850;color:#245a36}.timer{font-size:clamp(52px,7vw,75px);font-weight:900;text-align:center;letter-spacing:-3px;font-variant-numeric:tabular-nums;margin:15px 0 0}.caption{text-align:center;color:var(--muted);font-size:12px;min-height:18px}.durations{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}.duration{padding:11px 3px;border:1px solid var(--line);background:#f8fff3;border-radius:12px;font-size:12px;font-weight:800;color:#52715a}.duration.active{background:#245e3a;color:white;border-color:#245e3a}.actions{display:flex;gap:10px}.primary,.secondary{min-height:48px;border-radius:13px;padding:0 18px;font-weight:850;font-size:13px}.primary{background:#1e5a36;color:#fff;border:1px solid #1e5a36;flex:1;box-shadow:0 8px 18px #1e5a3620}.primary:hover{background:#2f7646}.secondary{background:#f4fbea;border:1px solid var(--line);color:#2c5b39}.tiny{text-align:center;color:var(--muted);font-size:10px;line-height:1.6;margin:17px 0 0}.right{display:grid;gap:20px}.tree-shop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:17px;max-height:430px;overflow-y:auto;padding:2px 4px 2px 0;scrollbar-color:#70a86b #e7f3df;scrollbar-width:thin}.tree-option{border:1px solid var(--line);background:#f7fff1;border-radius:16px;padding:12px 6px 10px;text-align:center;color:var(--ink);min-width:0;transition:transform .15s,border .15s;position:relative}.tree-option:hover{transform:translateY(-2px)}.tree-option.selected{border:2px solid #39844b;background:#e7f5dd;padding:11px 5px 9px}.tree-option.locked{opacity:.64}.tree-option .emoji{font-size:29px;display:block;margin-bottom:5px;filter:drop-shadow(0 3px 2px #2d60301c)}.tree-option strong{display:block;font-size:11px;overflow-wrap:anywhere}.tree-option small{display:block;color:var(--muted);font-size:9px;margin-top:5px}.tree-option .tag{position:absolute;top:5px;right:5px;font-size:8px}.section-note{font-size:11px;color:var(--muted);line-height:1.55;margin:12px 0 0}.task-form{display:flex;gap:8px;margin:18px 0 12px}.task-form input{min-width:0;flex:1;padding:12px;border:1px solid var(--line);border-radius:12px;background:#f8fff4;color:var(--ink);font-size:12px}.add{width:45px;border:0;border-radius:12px;background:#245e3a;color:white;font-size:24px}.task-list{display:grid;gap:8px}.task{display:flex;align-items:center;gap:9px;padding:11px;border:1px solid #deead8;border-radius:13px}.task input{accent-color:#24663e}.task span{flex:1;overflow-wrap:anywhere;font-size:12px}.task.done span{text-decoration:line-through;color:#849585}.delete{border:0;background:transparent;color:#a75b4e;font-size:18px}.empty{font-size:12px;color:var(--muted);text-align:center;padding:16px 0}.forest-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:16px}.forest-cell{min-height:69px;border:1px solid #d2e5c9;background:#eaf5e2;border-radius:13px;display:grid;place-content:center;text-align:center;gap:2px}.forest-cell span{font-size:25px}.forest-cell small{font-size:8px;color:#55735b}.quote{background:#d1e9c7;border:1px solid #c0ddb6;border-radius:22px;padding:20px 22px}.quote .mark{font-size:31px;color:#5e9855}.quote p{margin:0 0 12px;font-weight:750;line-height:1.55;color:#2b5a37}.quote small{font-size:9px;letter-spacing:1.5px;color:#5b8558;font-weight:900}.footer{text-align:center;padding:35px 0 28px;color:#507356;font-size:12px}.footer strong{font-size:17px;color:#174a2d}.toast{position:fixed;right:20px;bottom:20px;z-index:10;max-width:calc(100% - 40px);background:#174a2d;color:white;padding:14px 18px;border-radius:14px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none;font-size:13px}.toast.show{opacity:1;transform:translateY(0)}body.dark{--bg:#10251a;--bg2:#183522;--card:#1a3424;--ink:#edf7e9;--muted:#b2c9b2;--line:#345640;--shadow:0 18px 48px #0002;background:linear-gradient(145deg,#10251a,#193c27 60%,#10251a);color:var(--ink)}body.dark .brand{color:#e7f5e4}body.dark .nav a,body.dark .soft-btn{background:#1c3927;color:#d9f0d4;border-color:#345640}body.dark .stat,body.dark .card{background:#1a3424ed;border-color:#345640}body.dark .stat .ico,body.dark .pill,body.dark .duration.active{background:#2b5136;color:#e9f8e4}body.dark .duration,body.dark .secondary,body.dark .task-form input{background:#203d2a;color:#e8f4e4;border-color:#345640}body.dark .scene{filter:saturate(.85)}body.dark .tree-option{background:#203d2a;color:#e8f4e4;border-color:#345640}body.dark .tree-option.selected{background:#2b5136;border-color:#7dbb75}body.dark .forest-cell{background:#24442e;border-color:#345640}body.dark .quote{background:#203d2a;border-color:#345640}body.dark .quote p{color:#e4f5df}body.dark .footer,body.dark .hero p.sub{color:#b2c9b2}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.hero{align-items:flex-start;flex-direction:column}.hero-chip{min-width:0}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.top{flex-wrap:wrap}.nav{width:100%;justify-content:space-between}.nav a{padding:9px;font-size:11px}.hero{padding-top:25px}.hero h1{letter-spacing:-2px}.stats{gap:9px}.stat{padding:13px}.stat strong{font-size:21px}.card{padding:16px;border-radius:20px}.scene{height:235px}.tree-shop{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.tree-option{padding:10px 3px}.tree-option .emoji{font-size:25px}.forest-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.actions{gap:7px}.primary,.secondary{padding:0 12px}.duration{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
-
 <body>
-  <header class="topbar">
-    <a href="#" class="brand">
-      <img src="logo.png" alt="" class="logo"
-           onerror="this.style.display='none'">
-      <span>Green<span class="brand-light">Mind</span></span>
-    </a>
-
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#focus">Focus</a>
-      <a href="#forest">My Forest</a>
-      <a href="#tasks">Tasks</a>
-    </nav>
-
-    <button id="themeToggle" class="icon-button"
-            type="button" aria-label="Toggle dark mode">
-      🌙
-    </button>
-  </header>
-
-  <main class="container">
-    <section class="welcome">
-      <div>
-        <p class="eyebrow">YOUR PERSONAL GROWTH SPACE</p>
-        <h1>Small steps.<br><span>A greener mind.</span></h1>
-        <p class="subtitle">
-          Focus on what matters. Grow a forest, one session at a time.
-        </p>
-      </div>
-
-      <div class="welcome-badge">
-        <span>🌱</span>
-        <div>
-          <strong id="greeting">Ready to grow?</strong>
-          <small>Every minute counts.</small>
-        </div>
-      </div>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#" aria-label="GreenMind home"><span class="brand-mark">🌳</span><span>Green<em>Mind</em></span></a>
+  <nav class="nav" aria-label="Main navigation"><a href="#focus">Focus</a><a href="#trees">Tree garden</a><a href="#tasks">Tasks</a><a href="#forest">My forest</a></nav>
+  <button class="soft-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">🌙 Theme</button>
+</header>
+<section class="hero">
+  <div><p class="eyebrow">YOUR PERSONAL GROWTH SPACE</p><h1>Focus deeply.<br><span>Grow beautifully.</span></h1><p class="sub">Plant a little focus today. Grow a forest of progress tomorrow. Every completed session brings your GreenMind garden to life.</p></div>
+  <div class="hero-chip"><span class="big">🌱</span><div><strong id="hello">Your forest awaits</strong><small>One focused session at a time</small></div></div>
+</section>
+<section class="stats" aria-label="Your focus statistics">
+  <article class="stat"><span class="ico">⏱️</span><p>Total focus time</p><strong id="totalTime">0 min</strong></article>
+  <article class="stat"><span class="ico">🌳</span><p>Trees planted</p><strong id="treeCount">0</strong></article>
+  <article class="stat"><span class="ico">🎯</span><p>Sessions completed</p><strong id="sessionCount">0</strong></article>
+  <article class="stat"><span class="ico">🔥</span><p>Focus streak</p><strong id="streakCount">0 days</strong></article>
+</section>
+<main class="layout">
+  <section class="card" id="focus">
+    <div class="card-head"><div><p class="eyebrow">TIME TO CONCENTRATE</p><h2>Your focus session</h2></div><span class="pill" id="status">READY TO GROW</span></div>
+    <div class="scene" aria-label="Animated tree garden">
+      <div class="sun"></div><div class="cloud">☁️</div><div class="far-hill"></div><div class="near-hill"></div>
+      <div class="scene-caption" id="treeMessage">Choose a tree and begin your journey 🌱</div>
+    </div>
+    <div class="timer" id="timer" role="timer" aria-live="off">25:00</div>
+    <p class="caption" id="timerCaption">Choose a duration, then start focusing.</p>
+    <div class="durations" aria-label="Focus duration">
+      <button type="button" class="duration" data-min="15">15 min</button><button type="button" class="duration active" data-min="25">25 min</button><button type="button" class="duration" data-min="45">45 min</button><button type="button" class="duration" data-min="60">60 min</button>
+    </div>
+    <div class="actions"><button class="primary" id="startBtn" type="button">▶ Start focusing</button><button class="secondary" id="resetBtn" type="button">↺ Reset</button></div>
+    <p class="tiny">Your timer uses the real clock, so it stays accurate if you switch tabs. Complete the session to plant your chosen tree. Progress is saved in this browser.</p>
+  </section>
+  <div class="right">
+    <section class="card" id="trees"><div class="card-head"><div><p class="eyebrow">BUILD YOUR OWN GARDEN</p><h2>Choose your tree</h2></div><span class="pill" id="unlockedLabel">1 unlocked</span></div>
+      <p class="section-note">Explore 100 nature-inspired trees. Pick your favourite and complete focus sessions to unlock more varieties.</p>
+      <div class="tree-shop" id="treeShop"></div>
+      <p class="section-note" id="treeHint">Your first tree is ready to plant!</p>
     </section>
-
-    <section class="stats-grid" aria-label="Your statistics">
-      <article class="stat-card">
-        <span class="stat-icon">⏱️</span>
-        <p>Total focus time</p>
-        <strong id="totalTime">0 min</strong>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-icon">🌳</span>
-        <p>Trees grown</p>
-        <strong id="treeCount">0</strong>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-icon">🎯</span>
-        <p>Sessions completed</p>
-        <strong id="sessionCount">0</strong>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-icon">🔥</span>
-        <p>Daily streak</p>
-        <strong id="streakCount">0 days</strong>
-      </article>
+    <section class="card" id="tasks"><div class="card-head"><div><p class="eyebrow">PLAN YOUR GROWTH</p><h2>Study tasks</h2></div><span class="pill" id="taskCount">0 tasks</span></div>
+      <form class="task-form" id="taskForm"><label for="taskInput" class="sr-only" style="position:absolute;left:-9999px">Add a study task</label><input id="taskInput" maxlength="100" placeholder="e.g. Revise Biology chapter 1" required><button class="add" type="submit" aria-label="Add task">+</button></form>
+      <div class="task-list" id="taskList"></div><div class="empty" id="emptyTasks">Your goals start here. Add a study task ✨</div>
     </section>
-
-    <section class="main-grid">
-      <article class="panel focus-panel" id="focus">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">TIME TO CONCENTRATE</p>
-            <h2>Focus session</h2>
-          </div>
-          <span class="status-pill" id="status">READY</span>
-        </div>
-
-        <div class="tree-stage" id="treeStage">
-          <div class="sun"></div>
-          <div class="hill hill-back"></div>
-          <div class="hill hill-front"></div>
-
-          <div class="growing-tree" id="growingTree"
-               role="img" aria-label="A small tree ready to grow">
-            <span class="tree-crown crown-one"></span>
-            <span class="tree-crown crown-two"></span>
-            <span class="tree-crown crown-three"></span>
-            <span class="tree-trunk"></span>
-          </div>
-
-          <div class="tree-ground"></div>
-          <span class="tree-message" id="treeMessage">
-            Your next tree starts here 🌱
-          </span>
-        </div>
-
-        <div class="timer-display" id="timerDisplay"
-             role="timer" aria-label="Time remaining">
-          25:00
-        </div>
-
-        <p class="timer-caption" id="timerCaption">
-          Choose your focus duration and begin.
-        </p>
-
-        <div class="duration-options" aria-label="Focus duration">
-          <button class="duration-btn" data-minutes="15"
-                  type="button">15 min</button>
-          <button class="duration-btn selected" data-minutes="25"
-                  type="button">25 min</button>
-          <button class="duration-btn" data-minutes="45"
-                  type="button">45 min</button>
-          <button class="duration-btn" data-minutes="60"
-                  type="button">60 min</button>
-        </div>
-
-        <div class="timer-actions">
-          <button id="startBtn" class="primary-button" type="button">
-            ▶ Start focusing
-          </button>
-          <button id="resetBtn" class="secondary-button" type="button">
-            ↺ Reset
-          </button>
-        </div>
-
-        <p class="small-note">
-          🌿 Stay focused to grow your tree. Leaving the page open
-          keeps your session running.
-        </p>
-      </article>
-
-      <div class="right-column">
-        <article class="panel" id="tasks">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">PLAN YOUR GROWTH</p>
-              <h2>Study tasks</h2>
-            </div>
-            <span class="task-total" id="taskTotal">0 tasks</span>
-          </div>
-
-          <form id="taskForm" class="task-form">
-            <label class="visually-hidden" for="taskInput">
-              New study task
-            </label>
-            <input id="taskInput" type="text"
-                   maxlength="100"
-                   placeholder="e.g. Revise Chemistry..."
-                   required>
-            <button type="submit" class="add-button"
-                    aria-label="Add task">+</button>
-          </form>
-
-          <div id="taskList" class="task-list"></div>
-          <p id="emptyTasks" class="empty-state">
-            No tasks yet. Add your first goal! ✨
-          </p>
-        </article>
-
-        <article class="panel forest-panel" id="forest">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">YOUR LITTLE PARADISE</p>
-              <h2>My forest</h2>
-            </div>
-            <span class="forest-count" id="forestLabel">0 trees</span>
-          </div>
-
-          <p class="forest-description">
-            Every completed focus session adds a tree to your forest.
-          </p>
-
-          <div id="forestGrid" class="forest-grid"></div>
-
-          <p id="emptyForest" class="empty-state">
-            🌱 Your forest is waiting to grow.
-          </p>
-        </article>
-
-        <article class="quote-card">
-          <span>❝</span>
-          <p id="quoteText">
-            Great things are done by a series of small things brought together.
-          </p>
-          <small>YOUR DAILY REMINDER</small>
-        </article>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-brand">🌿 GreenMind</div>
-      <p>Focus. Grow. Achieve.</p>
-      <p class="footer-note">
-        Your progress grows with every focused minute.
-      </p>
-    </footer>
-  </main>
-
-  <div id="toast" class="toast" role="status"
-       aria-live="polite"></div>
+    <section class="card" id="forest"><div class="card-head"><div><p class="eyebrow">LOOK WHAT YOU GREW</p><h2>My forest</h2></div><span class="pill" id="forestLabel">0 trees</span></div><p class="section-note">Each completed session plants a tree in your personal forest.</p><div class="forest-grid" id="forestGrid"></div><div class="empty" id="emptyForest">🌱 Your forest is waiting for its first tree.</div></section>
+    <section class="quote"><div class="mark">❝</div><p id="quoteText">Small steps every day lead to big changes.</p><small>A LITTLE REMINDER TO KEEP GROWING</small></section>
+  </div>
+</main>
+<footer class="footer"><strong>🌿 GreenMind</strong><p>Focus. Grow. Achieve.</p><span>Made for calmer minds and stronger habits.</span></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const KEY = "greenmind-garden-v2";
+const TREES = [
+ {id:"oak",name:"Oak Tree",emoji:"🌳",need:0,desc:"Strong beginnings"},
+ {id:"pine",name:"Pine Tree",emoji:"🌲",need:1,desc:"Evergreen calm"},
+ {id:"palm",name:"Palm Tree",emoji:"🌴",need:2,desc:"Sunny focus"},
+ {id:"sprout",name:"Little Sprout",emoji:"🌱",need:3,desc:"Fresh start"},
+ {id:"blossom",name:"Blossom Tree",emoji:"🌸",need:4,desc:"Bloom with focus"},
+ {id:"maple",name:"Maple Tree",emoji:"🍁",need:5,desc:"Autumn colours"},
+ {id:"cactus",name:"Desert Cactus",emoji:"🌵",need:6,desc:"Stay resilient"},
+ {id:"clover",name:"Lucky Clover",emoji:"☘️",need:7,desc:"A little luck"},
+ {id:"bamboo",name:"Bamboo",emoji:"🎋",need:8,desc:"Grow steadily"},
+ {id:"sunflower",name:"Sunflower",emoji:"🌻",need:9,desc:"Face the light"},
+ {id:"mushroom",name:"Forest Mushroom",emoji:"🍄",need:10,desc:"Forest magic"},
+ {id:"autumn",name:"Autumn Tree",emoji:"🍂",need:11,desc:"Golden season"},
+ {id:"bonsai",name:"Bonsai",emoji:"🪴",need:12,desc:"Mindful patience"},
+ {id:"hibiscus",name:"Hibiscus",emoji:"🌺",need:13,desc:"Bright energy"},
+ {id:"magic",name:"Enchanted Tree",emoji:"✨",need:14,desc:"A rare reward"},
+ {id:"apple",name:"Apple Tree",emoji:"🍎",need:15,desc:"Sweet progress"},
+ {id:"orange",name:"Orange Tree",emoji:"🍊",need:16,desc:"Fresh energy"},
+ {id:"cherry",name:"Cherry Blossom",emoji:"🌸",need:17,desc:"Gentle focus"},
+ {id:"willow",name:"Weeping Willow",emoji:"🌿",need:18,desc:"Peaceful mind"},
+ {id:"cedar",name:"Cedar Tree",emoji:"🌲",need:19,desc:"Steady strength"},
+ {id:"jacaranda",name:"Jacaranda",emoji:"💜",need:20,desc:"Purple bloom"},
+ {id:"birch",name:"Silver Birch",emoji:"🌳",need:21,desc:"Light and calm"},
+ {id:"redwood",name:"Redwood Giant",emoji:"🌲",need:22,desc:"Reach high"},
+ {id:"fir",name:"Fir Tree",emoji:"🌲",need:23,desc:"Winter calm"},
+ {id:"spruce",name:"Blue Spruce",emoji:"🌲",need:24,desc:"Cool focus"},
+ {id:"lemon",name:"Lemon Tree",emoji:"🍋",need:25,desc:"Bright ideas"},
+ {id:"mango",name:"Mango Tree",emoji:"🥭",need:26,desc:"Tropical joy"},
+ {id:"coconut",name:"Coconut Palm",emoji:"🌴",need:27,desc:"Island calm"},
+ {id:"olive",name:"Olive Tree",emoji:"🫒",need:28,desc:"Quiet wisdom"},
+ {id:"peach",name:"Peach Tree",emoji:"🍑",need:29,desc:"Soft beginnings"},
+ {id:"pear",name:"Pear Tree",emoji:"🍐",need:30,desc:"Patient growth"},
+ {id:"plum",name:"Plum Tree",emoji:"🟣",need:31,desc:"Sweet rewards"},
+ {id:"pomegranate",name:"Pomegranate Tree",emoji:"❤️",need:32,desc:"Many possibilities"},
+ {id:"fig",name:"Fig Tree",emoji:"🌿",need:33,desc:"Rooted in calm"},
+ {id:"avocado",name:"Avocado Tree",emoji:"🥑",need:34,desc:"Healthy habits"},
+ {id:"banana",name:"Banana Tree",emoji:"🍌",need:35,desc:"Keep it light"},
+ {id:"papaya",name:"Papaya Tree",emoji:"🍈",need:36,desc:"Sunny growth"},
+ {id:"guava",name:"Guava Tree",emoji:"🍃",need:37,desc:"Simple joys"},
+ {id:"lychee",name:"Lychee Tree",emoji:"🌺",need:38,desc:"Little rewards"},
+ {id:"almond",name:"Almond Tree",emoji:"🌸",need:39,desc:"Fresh start"},
+ {id:"walnut",name:"Walnut Tree",emoji:"🌳",need:40,desc:"Deep roots"},
+ {id:"chestnut",name:"Chestnut Tree",emoji:"🌰",need:41,desc:"Cozy focus"},
+ {id:"acacia",name:"Acacia",emoji:"🌼",need:42,desc:"Golden sunshine"},
+ {id:"magnolia",name:"Magnolia",emoji:"🤍",need:43,desc:"Quiet beauty"},
+ {id:"dogwood",name:"Dogwood",emoji:"🌸",need:44,desc:"Gentle strength"},
+ {id:"wisteria",name:"Wisteria",emoji:"💜",need:45,desc:"Dreamy focus"},
+ {id:"azalea",name:"Azalea",emoji:"🌺",need:46,desc:"Colourful calm"},
+ {id:"camellia",name:"Camellia",emoji:"🌹",need:47,desc:"Graceful growth"},
+ {id:"lilac",name:"Lilac Tree",emoji:"💐",need:48,desc:"Spring freshness"},
+ {id:"crabapple",name:"Crabapple",emoji:"🌺",need:49,desc:"Tiny blossoms"},
+ {id:"ginkgo",name:"Ginkgo",emoji:"🍂",need:50,desc:"Ancient wisdom"},
+ {id:"larch",name:"Larch",emoji:"🌲",need:51,desc:"Seasonal change"},
+ {id:"cypress",name:"Cypress",emoji:"🌲",need:52,desc:"Tall and tranquil"},
+ {id:"juniper",name:"Juniper",emoji:"🌿",need:53,desc:"Fresh air"},
+ {id:"hemlock",name:"Hemlock Tree",emoji:"🌲",need:54,desc:"Forest quiet"},
+ {id:"yew",name:"Yew Tree",emoji:"🌳",need:55,desc:"Timeless growth"},
+ {id:"poplar",name:"Poplar",emoji:"🌳",need:56,desc:"Reach upward"},
+ {id:"aspen",name:"Aspen",emoji:"🍃",need:57,desc:"Shimmering leaves"},
+ {id:"alder",name:"Alder Tree",emoji:"🌿",need:58,desc:"Grounded growth"},
+ {id:"elm",name:"Elm Tree",emoji:"🌳",need:59,desc:"Sheltering shade"},
+ {id:"beech",name:"Beech Tree",emoji:"🌳",need:60,desc:"Steady focus"},
+ {id:"ash",name:"Ash Tree",emoji:"🍃",need:61,desc:"New beginnings"},
+ {id:"hazel",name:"Hazel Tree",emoji:"🌰",need:62,desc:"Curious mind"},
+ {id:"holly",name:"Holly Tree",emoji:"🎄",need:63,desc:"Festive spirit"},
+ {id:"rowan",name:"Rowan Tree",emoji:"🔴",need:64,desc:"Brave heart"},
+ {id:"hawthorn",name:"Hawthorn",emoji:"🌸",need:65,desc:"Small wonders"},
+ {id:"linden",name:"Linden Tree",emoji:"🌼",need:66,desc:"A calm pause"},
+ {id:"sycamore",name:"Sycamore",emoji:"🍁",need:67,desc:"Open branches"},
+ {id:"plane",name:"Plane Tree",emoji:"🌳",need:68,desc:"Room to grow"},
+ {id:"locust",name:"Honey Locust",emoji:"🌿",need:69,desc:"Sweet persistence"},
+ {id:"eucalyptus",name:"Eucalyptus",emoji:"🌿",need:70,desc:"Breathe easy"},
+ {id:"tea",name:"Tea Tree",emoji:"🍃",need:71,desc:"Slow moments"},
+ {id:"rubber",name:"Rubber Tree",emoji:"🪴",need:72,desc:"Flexible thinking"},
+ {id:"dragon",name:"Dragon Tree",emoji:"🐉",need:73,desc:"Legendary focus"},
+ {id:"rainbow",name:"Rainbow Tree",emoji:"🌈",need:74,desc:"Colourful goals"},
+ {id:"crystal",name:"Crystal Tree",emoji:"💎",need:75,desc:"Shine within"},
+ {id:"moon",name:"Moonlit Tree",emoji:"🌙",need:76,desc:"Night focus"},
+ {id:"star",name:"Starlight Tree",emoji:"⭐",need:77,desc:"Reach for stars"},
+ {id:"aurora",name:"Aurora Tree",emoji:"🌌",need:78,desc:"Dream big"},
+ {id:"golden",name:"Golden Tree",emoji:"🌟",need:79,desc:"Golden effort"},
+ {id:"silver",name:"Silver Tree",emoji:"✨",need:80,desc:"Quiet brilliance"},
+ {id:"ruby",name:"Ruby Tree",emoji:"❤️",need:81,desc:"Passionate progress"},
+ {id:"sapphire",name:"Sapphire Tree",emoji:"💙",need:82,desc:"Clear thinking"},
+ {id:"emerald",name:"Emerald Tree",emoji:"💚",need:83,desc:"Fresh ambition"},
+ {id:"amethyst",name:"Amethyst Tree",emoji:"🔮",need:84,desc:"Creative calm"},
+ {id:"flame",name:"Flame Tree",emoji:"🔥",need:85,desc:"Bright determination"},
+ {id:"snow",name:"Snowy Pine",emoji:"❄️",need:86,desc:"Winter wonder"},
+ {id:"frost",name:"Frosted Fir",emoji:"🌲",need:87,desc:"Cool patience"},
+ {id:"spring",name:"Spring Bloom",emoji:"🌷",need:88,desc:"A new season"},
+ {id:"summer",name:"Summer Canopy",emoji:"☀️",need:89,desc:"Warm energy"},
+ {id:"harvest",name:"Harvest Tree",emoji:"🌾",need:90,desc:"Celebrate effort"},
+ {id:"fairy",name:"Fairy Tree",emoji:"🧚",need:91,desc:"A touch of magic"},
+ {id:"ancient",name:"Ancient Forest Tree",emoji:"🌳",need:92,desc:"Wisdom takes time"},
+ {id:"guardian",name:"Forest Guardian",emoji:"🛡️",need:93,desc:"Protect your focus"},
+ {id:"dream",name:"Dream Tree",emoji:"💭",need:94,desc:"Imagine more"},
+ {id:"peace",name:"Peace Tree",emoji:"🕊️",need:95,desc:"Find your balance"},
+ {id:"hope",name:"Hope Tree",emoji:"🌱",need:96,desc:"Begin again"},
+ {id:"victory",name:"Victory Tree",emoji:"🏆",need:97,desc:"Earned through effort"},
+ {id:"world",name:"World Tree",emoji:"🌍",need:98,desc:"Keep growing"},
+ {id:"lotus",name:"Lotus Grove",emoji:"🪷",need:99,desc:"Peaceful persistence"}
+];
+const QUOTES=["Small steps every day lead to big changes.","You do not have to be perfect; you just have to begin.","Focus on progress, not perfection.","Every focused minute is a seed for tomorrow.","Grow through what you go through.","A calm mind can do wonderful things."];
+function fresh(){return {totalSeconds:0,sessions:0,trees:[],tasks:[],streak:0,lastDate:"",dailySeconds:{},theme:"light",selectedTree:"oak"}}
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||"null");if(!x||typeof x!=="object")return fresh();const d=fresh();return {...d,...x,totalSeconds:Number.isFinite(x.totalSeconds)?Math.max(0,x.totalSeconds):0,sessions:Number.isFinite(x.sessions)?Math.max(0,x.sessions):0,trees:Array.isArray(x.trees)?x.trees.filter(t=>t&&typeof t.name==="string"&&typeof t.date==="string").slice(-500):[],tasks:Array.isArray(x.tasks)?x.tasks.filter(t=>t&&typeof t.id==="string"&&typeof t.text==="string"&&typeof t.done==="boolean").slice(-200):[],dailySeconds:x.dailySeconds&&typeof x.dailySeconds==="object"?x.dailySeconds:{},theme:x.theme==="dark"?"dark":"light",selectedTree:TREES.some(t=>t.id===x.selectedTree)?x.selectedTree:"oak"};}catch(e){return fresh()}}
+let data=load(),duration=25,remaining=1500,running=false,endAt=0,interval=null,toastTimer=null;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){toast("Couldn't save in this browser. Check storage space.")}}
+function dateKey(d=new Date()){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+function dayBefore(){const d=new Date();d.setDate(d.getDate()-1);return dateKey(d)}
+function toast(s){const el=$("#toast");el.textContent=s;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2800)}
+function fmt(sec){sec=Math.max(0,Math.ceil(sec));return `${String(Math.floor(sec/60)).padStart(2,"0")}:${String(sec%60).padStart(2,"0")}`}
+function renderStats(){const today=Number(data.dailySeconds[dateKey()]||0);$("#totalTime").textContent=data.totalSeconds>=3600?`${Math.floor(data.totalSeconds/3600)}h ${Math.floor(data.totalSeconds%3600/60)}m`:`${Math.floor(data.totalSeconds/60)} min`;$("#treeCount").textContent=data.trees.length;$("#sessionCount").textContent=data.sessions;$("#streakCount").textContent=`${data.streak} days`;$("#hello").textContent=today?"You've grown today!":"Your forest awaits";$("#forestLabel").textContent=`${data.trees.length} trees`;}
+function getSelected(){return TREES.find(t=>t.id===data.selectedTree)||TREES[0]}
+function renderShop(){const shop=$("#treeShop");shop.replaceChildren();const unlocked=TREES.filter(t=>data.sessions>=t.need);$("#unlockedLabel").textContent=`${unlocked.length}/${TREES.length} unlocked`;for(const t of TREES){const lock=data.sessions<t.need;const b=document.createElement("button");b.type="button";b.className="tree-option"+(data.selectedTree===t.id?" selected":"")+(lock?" locked":"");b.disabled=lock;b.setAttribute("aria-pressed",String(data.selectedTree===t.id));const emoji=document.createElement("span");emoji.className="emoji";emoji.textContent=t.emoji;const name=document.createElement("strong");name.textContent=t.name;const small=document.createElement("small");small.textContent=lock?`🔒 Unlock at ${t.need} sessions`:t.desc;b.append(emoji,name,small);if(data.selectedTree===t.id){const tag=document.createElement("span");tag.className="tag";tag.textContent="✓";b.append(tag)}b.addEventListener("click",()=>{if(running){toast("Pause the timer before changing trees.");return}data.selectedTree=t.id;save();renderShop();updateTree();toast(`${t.name} selected! 🌿`)});shop.append(b)}const next=TREES.find(t=>data.sessions<t.need);$("#treeHint").textContent=next?`Complete ${next.need-data.sessions} more session${next.need-data.sessions===1?"":"s"} to unlock ${next.name}.`:"Amazing! You've unlocked every tree in the garden."}
+function updateTree(){const t=getSelected();$("#treeMessage").textContent=running?`${t.name} is growing with your focus 🌱`:`${t.emoji} ${t.name} is ready to grow`}
+function renderTasks(){const list=$("#taskList");list.replaceChildren();$("#emptyTasks").hidden=data.tasks.length>0;$("#taskCount").textContent=`${data.tasks.filter(t=>t.done).length}/${data.tasks.length} done`;for(const task of data.tasks){const row=document.createElement("div");row.className="task"+(task.done?" done":"");const check=document.createElement("input");check.type="checkbox";check.checked=task.done;check.setAttribute("aria-label",`Mark ${task.text} complete`);check.addEventListener("change",()=>{task.done=check.checked;save();renderTasks()});const text=document.createElement("span");text.textContent=task.text;const del=document.createElement("button");del.type="button";del.className="delete";del.textContent="×";del.setAttribute("aria-label",`Delete ${task.text}`);del.addEventListener("click",()=>{data.tasks=data.tasks.filter(t=>t.id!==task.id);save();renderTasks();toast("Task removed")});row.append(check,text,del);list.append(row)}}
+function renderForest(){const grid=$("#forestGrid");grid.replaceChildren();const trees=data.trees.slice(-40);$("#emptyForest").hidden=trees.length>0;trees.forEach((t,i)=>{const cell=document.createElement("div");cell.className="forest-cell";const emoji=document.createElement("span");emoji.textContent=t.emoji||"🌳";const small=document.createElement("small");small.textContent=`${t.minutes} min`;cell.title=`${t.name||"Tree"} · ${t.date} · ${t.minutes} minutes`;cell.append(emoji,small);grid.append(cell)})}
+function updateDisplay(){remaining=Math.max(0,Math.ceil((running?endAt:Date.now()+remaining*1000)-(running?Date.now():Date.now())/1000));}
+function paintTimer(){ $("#timer").textContent=fmt(remaining);document.title=running?`${fmt(remaining)} · GreenMind`:"GreenMind — Focus. Grow. Achieve.";$("#status").textContent=running?"FOCUS IN PROGRESS":remaining===0?"SESSION COMPLETE":"READY TO GROW";$("#startBtn").textContent=running?"Ⅱ Pause session":remaining===0?"↻ Start again":"▶ Start focusing";$("#timerCaption").textContent=running?"Breathe, focus, and let your tree grow.":remaining===0?"Session complete — wonderful work!":"Choose a duration, then start focusing.";updateTree()}
+function tick(){if(!running)return;remaining=Math.max(0,Math.ceil((endAt-Date.now())/1000));paintTimer();if(remaining<=0)completeSession()}
+function startPause(){if(running){tick();if(!running)return;running=false;clearInterval(interval);interval=null;save();paintTimer();toast("Paused. Take a breath.");return}if(remaining<=0)remaining=duration*60;running=true;endAt=Date.now()+remaining*1000;clearInterval(interval);interval=setInterval(tick,250);paintTimer();toast("Focus session started. You've got this! 🌱")}
+function resetTimer(){running=false;clearInterval(interval);interval=null;remaining=duration*60;paintTimer();toast("Timer reset.")}
+function chooseDuration(n){if(running){toast("Pause your session before changing duration.");return}duration=n;remaining=n*60;document.querySelectorAll(".duration").forEach(b=>b.classList.toggle("active",Number(b.dataset.min)===n));paintTimer()}
+function completeSession(){if(!running)return;running=false;clearInterval(interval);interval=null;remaining=0;const today=dateKey();data.sessions++;data.totalSeconds+=duration*60;data.dailySeconds[today]=(Number(data.dailySeconds[today])||0)+duration*60;if(data.lastDate!==today){data.streak=data.lastDate===dayBefore()?data.streak+1:1;data.lastDate=today}const t=getSelected();data.trees.push({name:t.name,emoji:t.emoji,date:today,minutes:duration,id:`${Date.now()}`});if(data.trees.length>500)data.trees=data.trees.slice(-500);save();renderStats();renderShop();renderForest();paintTimer();$("#treeMessage").textContent=`Beautiful work! You grew a ${t.name} ${t.emoji}`;toast(`Session complete! ${t.emoji} ${t.name} planted in your forest.`);if("Notification"in window&&Notification.permission==="granted"){try{new Notification("GreenMind",{body:`Your focus session is complete. ${t.emoji} ${t.name} planted!`})}catch(e){}}}
+function addTask(text){text=text.trim();if(!text)return;if(data.tasks.length>=200){toast("Task limit reached (200).");return}data.tasks.unshift({id:`${Date.now()}-${Math.random().toString(36).slice(2)}`,text,done:false});save();renderTasks();toast("Task added. One step closer! 🌿")}
+function setTheme(){document.body.classList.toggle("dark",data.theme==="dark");$("#themeBtn").textContent=data.theme==="dark"?"☀️ Light mode":"🌙 Dark mode"}
+$("#startBtn").addEventListener("click",startPause);$("#resetBtn").addEventListener("click",resetTimer);$("#themeBtn").addEventListener("click",()=>{data.theme=data.theme==="dark"?"light":"dark";setTheme();save()});document.querySelectorAll(".duration").forEach(b=>b.addEventListener("click",()=>chooseDuration(Number(b.dataset.min))));$("#taskForm").addEventListener("submit",e=>{e.preventDefault();addTask($("#taskInput").value);$("#taskInput").value="";$("#taskInput").focus()});document.addEventListener("visibilitychange",()=>{if(!document.hidden&&running)tick()});window.addEventListener("beforeunload",()=>{if(running){/* The end timestamp is used to keep elapsed time accurate while the page is open. */}});
+$("#quoteText").textContent=QUOTES[Math.floor(Math.random()*QUOTES.length)];setTheme();renderStats();renderShop();renderTasks();renderForest();paintTimer();
+</script>
 </body>
 </html>
